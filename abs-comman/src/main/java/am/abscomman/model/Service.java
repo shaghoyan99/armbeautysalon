@@ -13,7 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 @Entity
-@Table(name = "service")
+@Table(name = "services")
 
 public class Service {
 
@@ -25,7 +25,7 @@ public class Service {
     private String userTypeService;
     @OneToMany(fetch = FetchType.LAZY)
     private List<User> manager;
-    @ManyToMany(mappedBy = "service", fetch = FetchType.LAZY)
+    @ManyToMany(mappedBy = "services", fetch = FetchType.LAZY)
     private List<Hairdresser> hairdressers ;
 
 
