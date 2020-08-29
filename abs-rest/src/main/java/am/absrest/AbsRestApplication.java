@@ -1,4 +1,4 @@
-package am.absweb;
+package am.absrest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,13 +7,13 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@ComponentScan({"am.abscomman.*","am.absweb.*"})
-@EnableJpaRepositories(basePackages = {"am.abscomman.*","am.absweb.*"})
+@ComponentScan({"am.abscomman.*","am.absrest.*"})
+@EnableJpaRepositories(basePackages = {"am.abscomman.*","am.absrest.*"})
 @EntityScan("am.abscommon.*")
-public class AbsWebApplication {
+public class AbsRestApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AbsWebApplication.class, args);
+		SpringApplication.run(AbsRestApplication.class, args);
 	}
 
 }
