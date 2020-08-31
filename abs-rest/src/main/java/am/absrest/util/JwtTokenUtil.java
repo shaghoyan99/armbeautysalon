@@ -15,6 +15,7 @@ import java.util.function.Function;
 @Component
 public class JwtTokenUtil implements Serializable {
 
+
     @Value("${jwt.secret}")
     private String secret;
 
