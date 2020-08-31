@@ -1,4 +1,4 @@
-package am.abscomman.util;
+package am.absrest.util;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

@@ -7,7 +7,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
 
 
 @Data
@@ -25,11 +24,6 @@ public class User {
     private String name;
     private String surname;
     private String mainPhoto;
-    @OneToMany(fetch = FetchType.LAZY)
-    private List<Pictures> pictures;
-    @OneToMany(fetch = FetchType.LAZY)
-    private List<WorkTime> workTime;
-    @Enumerated(value = EnumType.STRING)
     @Column(columnDefinition = "enum('MALE','FEMALE')")
     private Gender gender;
     @Enumerated(value = EnumType.STRING)
