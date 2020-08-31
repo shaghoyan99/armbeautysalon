@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -21,5 +22,6 @@ public class WorkTime {
     private int id;
     private String startTime;
     private String endTime;
-    private int userId;
+    @OneToMany(fetch = FetchType.LAZY)
+    private List<User> user;
 }
