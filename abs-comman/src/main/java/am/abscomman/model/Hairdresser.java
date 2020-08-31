@@ -25,12 +25,12 @@ public class Hairdresser {
     private String surname;
     private String pictures;
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
-    @JoinTable(name = "service_hairdressers",
+    @JoinTable(name = "services_hairdressers",
             joinColumns = {
-                    @JoinColumn(name = "service_id", referencedColumnName = "id",
+                    @JoinColumn(name = "hairdressers_id", referencedColumnName = "id",
                             nullable = false, updatable = false)},
             inverseJoinColumns = {
-                    @JoinColumn(name = "hairdressers_id", referencedColumnName = "id",
+                    @JoinColumn(name = "service_id", referencedColumnName = "id",
                             nullable = false, updatable = false)})
     private List<Service> services;
 }

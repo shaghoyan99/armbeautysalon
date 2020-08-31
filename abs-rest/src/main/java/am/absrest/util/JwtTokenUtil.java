@@ -1,4 +1,4 @@
-package am.abscomman.util;
+package am.absrest.util;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -14,6 +14,7 @@ import java.util.function.Function;
 
 @Component
 public class JwtTokenUtil implements Serializable {
+
 
     @Value("${jwt.secret}")
     private String secret;

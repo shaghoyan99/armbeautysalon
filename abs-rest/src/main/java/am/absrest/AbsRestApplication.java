@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @SpringBootApplication
 @ComponentScan({"am.abscomman.*","am.absrest.*"})
 @EnableJpaRepositories(basePackages = {"am.abscomman.*","am.absrest.*"})
-@EntityScan("am.abscommon.*")
+@EntityScan("am.abscomman.*")
 public class AbsRestApplication {
 
 	public static void main(String[] args) {
