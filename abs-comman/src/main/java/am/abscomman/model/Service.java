@@ -14,7 +14,7 @@ import java.util.List;
 @Builder
 @Entity
 @Table(name = "services")
-//
+
 public class Service {
 
     @Id
