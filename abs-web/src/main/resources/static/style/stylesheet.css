@@ -266,7 +266,7 @@ img.be_logo {
 
 /*login-block*/
 .login-header-block {
-    margin-top: 8.5px;
+    margin-top: 34px;
     float: right;
     margin-right: 0px;
 }
@@ -276,12 +276,26 @@ img.be_logo {
     text-align: right;
 }
 
+.login_block1 {
+    text-align: right;
+    margin-top: 15px;
+}
+
 .login_block .btn-login {
     margin-right: 0px;
     margin-bottom: 0px;
 }
 
+.login_block1 .btn-login {
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+
 .login_block a:hover {
+    color: #262626;
+}
+
+.login_block1 a:hover {
     color: #262626;
 }
 
@@ -295,7 +309,16 @@ img.be_logo {
     float: right;
 }
 
+.page-login .login_block1 .be-drop-down {
+    margin-top: 1.5px;
+    float: right;
+}
+
 .page-login .login_block .login-user-down {
+    margin-top: 0px;
+}
+
+.page-login .login_block1 .login-user-down {
     margin-top: 0px;
 }
 
@@ -304,7 +327,7 @@ img.be_logo {
     display: block;
     color: #545a69;
     float: right;
-    margin-top: 13px;
+    margin-top: -7px;
 }
 
 a.messages-popup:hover, a.notofications-popup:hover {
@@ -345,7 +368,17 @@ a.messages-popup:hover, a.notofications-popup:hover {
     margin-bottom: 0px;
 }
 
+.login_block1 .be-drop-down {
+    display: inline-block;
+    margin-right: 30px;
+    margin-bottom: 0px;
+}
+
 .login_block .be-drop-down .drop-down-list {
+    text-align: center;
+}
+
+.login_block1 .be-drop-down .drop-down-list {
     text-align: center;
 }
 
@@ -5806,6 +5839,7 @@ span.num-data {
     color: #b4b7c1;
     margin-right: 20px;
 }
+
 .social-input .social-btn {
     margin-right: 20px;
 }

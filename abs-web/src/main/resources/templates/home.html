@@ -23,8 +23,6 @@
 </head>
 <body>
 
-<!-- THE LOADER -->
-
 <div class="be-loader">
     <div class="spinner">
         <div class="spinner-container container1">
@@ -872,7 +870,7 @@
                         <i class="fa fa-times close-button"></i>
                         <h5 class="large-popup-title">Log in</h5>
                     </div>
-                    <form th:action="@{/perform_login}" class="popup-input-search" method="post">
+                    <form th:action="@{/perform_login}" class="popup-input-search" th:method="post">
                         <div class="col-md-6">
                             <input class="input-signtype" name="username" type="text" required="" placeholder="Username">
                         </div>
@@ -911,7 +909,7 @@
                         <i class="fa fa-times close-button"></i>
                         <h5 class="large-popup-title">Register</h5>
                     </div>
-                    <form action="/addUser" class="popup-input-search" enctype="multipart/form-data" th:method="post">
+                    <form th:action="@{/addUser}" class="popup-input-search" enctype="multipart/form-data" th:method="post">
                         <div class="col-md-6">
                             <input class="input-signtype" type="text" name="name" required="" placeholder="First Name">
                         </div>
