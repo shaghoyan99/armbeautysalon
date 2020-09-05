@@ -328,6 +328,10 @@ $(function() {
 		$(".large-popup.login").slideToggle();
 		return false;
 	});
+	$(".login_block1 .btn-login").on("click",function(){
+		$(".large-popup.login").slideToggle();
+		return false;
+	});
 
 	$(".be-signup-link").on("click", function(){
 		$(".large-popup.login").slideDown();
