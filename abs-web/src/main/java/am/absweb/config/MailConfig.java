@@ -12,6 +12,7 @@ import org.thymeleaf.templateresolver.StringTemplateResolver;
 
 import java.util.Collections;
 
+
 @Configuration
 public class MailConfig {
 

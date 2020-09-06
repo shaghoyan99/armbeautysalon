@@ -8,28 +8,28 @@ import am.abscomman.service.UserService;
 import am.abscomman.webDto.UserDto;
 import am.absweb.security.CurrentUser;
 import lombok.RequiredArgsConstructor;
-import org.apache.commons.io.IOUtils;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.MediaType;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.mail.MessagingException;
 import javax.validation.Valid;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
 import java.util.Locale;
 import java.util.Optional;
 import java.util.UUID;
+
 
 @Controller
 @RequiredArgsConstructor
@@ -47,10 +47,6 @@ public class MainController {
         return "home";
     }
 
-    @RequestMapping("/403")
-    public String accessDenied() {
-        return "forbidden";
-    }
 
     @PostMapping("/addUser")
     public String addUser(@ModelAttribute("userDto") @Valid UserDto userDto, BindingResult br,
@@ -101,15 +97,6 @@ public class MainController {
 
     }
 
-    @GetMapping(
-            value = "/image",
-            produces = MediaType.IMAGE_JPEG_VALUE
-    )
-    public @ResponseBody
-    byte[] getImage(@RequestParam("name") String imageName) throws IOException {
-        InputStream in = new FileInputStream(uploadDir + File.separator + imageName);
-        return IOUtils.toByteArray(in);
-    }
 
     @GetMapping("/successLogin")
     public String successLogin(@AuthenticationPrincipal CurrentUser currentUser) {

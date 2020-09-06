@@ -1,9 +1,7 @@
 package am.absweb.security;
 
-
 import am.abscomman.model.User;
 import org.springframework.security.core.authority.AuthorityUtils;
-
 
 public class CurrentUser extends org.springframework.security.core.userdetails.User {
 
