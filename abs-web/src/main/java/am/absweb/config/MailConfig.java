@@ -1,5 +1,6 @@
 package am.absweb.config;
 
+import org.hibernate.annotations.Synchronize;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ResourceBundleMessageSource;
@@ -11,6 +12,7 @@ import org.thymeleaf.templateresolver.ITemplateResolver;
 import org.thymeleaf.templateresolver.StringTemplateResolver;
 
 import java.util.Collections;
+
 
 @Configuration
 public class MailConfig {
