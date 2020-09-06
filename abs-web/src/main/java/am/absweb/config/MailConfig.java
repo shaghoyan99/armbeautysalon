@@ -1,6 +1,5 @@
 package am.absweb.config;
 
-import org.hibernate.annotations.Synchronize;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ResourceBundleMessageSource;
