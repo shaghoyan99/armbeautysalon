@@ -47,10 +47,6 @@ public class MainController {
         return "home";
     }
 
-    @RequestMapping("/403")
-    public String accessDenied() {
-        return "forbidden";
-    }
 
     @PostMapping("/addUser")
     public String addUser(@ModelAttribute("userDto") @Valid UserDto userDto, BindingResult br,
@@ -101,15 +97,6 @@ public class MainController {
 
     }
 
-    @GetMapping(
-            value = "/image",
-            produces = MediaType.IMAGE_JPEG_VALUE
-    )
-    public @ResponseBody
-    byte[] getImage(@RequestParam("name") String imageName) throws IOException {
-        InputStream in = new FileInputStream(uploadDir + File.separator + imageName);
-        return IOUtils.toByteArray(in);
-    }
 
     @GetMapping("/successLogin")
     public String successLogin(@AuthenticationPrincipal CurrentUser currentUser) {
