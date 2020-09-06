@@ -26,6 +26,11 @@ public class UserController {
         return "userPage";
     }
 
+    @GetMapping("/userEdit")
+    public String userEdit() {
+        return "userEdit";
+    }
+
     @GetMapping(
             value = "/image",
             produces = MediaType.IMAGE_JPEG_VALUE

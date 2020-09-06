@@ -1,5 +1,5 @@
-f<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<title>NGRNetwork</title>
 		<meta charset="utf-8">
@@ -47,62 +47,7 @@ f<!DOCTYPE html>
 			</div>
 	    </div>
 	<!-- THE HEADER -->
-	<header>
-		<div class="container-fluid custom-container">
-			<div class="row no_row row-header">
-				<div class="brand-be">
-					<a href="home.html"><img src="img/logo.png" alt="logo" class="be_logo">
-					</a>
-				</div>
-				<div class="header-menu-block">
-					<button class="cmn-toggle-switch cmn-toggle-switch__htx"><span></span></button>
-					<ul class="header-menu" id="one">
-						<li><a href="search.html">Find Projects</a><i class="fa fa-angle-down"></i>
-							<ul>
-								<li>
-									<a href="activity.html">ACTIVITY</a>
-									<i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i>
-									<ul>
-										<li><a href="page1.html">PAGE 1</a></li>
-										<li><a href="page2.html">PAGE 2</a></li>
-										<li><a href="page3.html">PAGE 3</a></li>
-									</ul>
-								</li>
-								<li><a href="search.html">SEARCH</a></li>
-							</ul>
-						</li>
-						<li><a href="activity.html">Jobs</a></li>
-						<li><a href="search.html">Find Candidates</a><i class="fa fa-angle-down"></i>
-							<ul>
-								<li><a href="author-edit.html">AUTHOR EDIT</a></li>
-								<li><a href="userPage.html">AUTHOR LOGIN</a></li>
-								<li><a href="messages.html">MESSAGES</a></li>
-								<li><a href="messages-2.html">MESSAGES 2</a></li>
-							</ul>
-						</li>
-						<li class="active-header"><a href="activity.html">Community</a><i class="fa fa-angle-down"></i>
-						<ul>
-							<li><a href="blog.html">BLOG</a></li>							
-							<li><a href="blog-2.html">BLOG 2</a></li>						
-							<li><a href="blog-3.html">BLOG 3</a></li>
-							<li><a href="statictics.html">STATISTICS</a></li>
-							<li><a href="faq.html">FAQ</a></li>
-							<li><a href="about-us.html">ABOUT US</a></li>
-							<li><a href="contact-us.html">CONTACT US</a></li>
-							<li><a href="shortcodes.html">SHORTCODES</a></li>
-						</ul></li>
-					</ul>
-				</div>
-				<div class="login-header-block">
-					<div class="login_block">
-						<a class="btn-login btn color-1 size-2 hover-2" href="blog-detail-2.html"><i class="fa fa-user"></i>
-						Log in</a>
-					</div>	
-				</div>
-			</div>
-		</div>
-	</header>	
-
+	<header th:insert="fragments/general :: menu"></header>
 
 	<!-- MAIN CONTENT -->
 	<div id="content-block">
@@ -110,7 +55,7 @@ f<!DOCTYPE html>
 			<div class="row">
 				<div class="col-xs-12 col-md-3 left-feild">
 					<div class="be-vidget back-block">
-						<a class="btn full color-1 size-1 hover-1"><i class="fa fa-chevron-left"></i>back to profile</a>
+						<a class="btn full color-1 size-1 hover-1" href="/userPage"><i class="fa fa-chevron-left"></i>back to profile</a>
 					</div>
 					<div class="be-vidget hidden-xs hidden-sm" id="scrollspy">
 						<h3 class="letf-menu-article">

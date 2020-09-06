@@ -88,9 +88,21 @@
             </properties>
         </profile>
         <profile>
-            <id>prod</id>
+            <id>Niko</id>
             <properties>
-                <spring.profiles.active>prod</spring.profiles.active>
+                <spring.profiles.active>Niko</spring.profiles.active>
+            </properties>
+        </profile>
+        <profile>
+            <id>Smbat</id>
+            <properties>
+                <spring.profiles.active>Smbat</spring.profiles.active>
+            </properties>
+        </profile>
+        <profile>
+            <id>Saq</id>
+            <properties>
+                <spring.profiles.active>Saq</spring.profiles.active>
             </properties>
         </profile>
     </profiles>
