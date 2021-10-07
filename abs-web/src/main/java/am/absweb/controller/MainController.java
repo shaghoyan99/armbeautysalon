@@ -36,7 +36,7 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class MainController {
 
-    @Value("${file.upload.dir}")
+    @Value(value = "${file.upload.dir}")
     private String uploadDir;
     private final UserService userService;
     private final EmailService emailService;
